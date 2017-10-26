@@ -1,2 +1,2 @@
 # ZeldaOOP
-Powerful abstraction library for modding N64 Zelda ROMs.
+Powerful .NET abstraction library for modding N64 Zelda ROMs.
