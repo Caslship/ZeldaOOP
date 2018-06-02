@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ZeldaOOP.Fetching.AddressResolvers
 {
-    public interface IZAddressResolver
+    public interface IAddressResolver
     {
         // TODO: Take in an address and then decide what Fetcher I should use
     }

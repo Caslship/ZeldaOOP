@@ -4,8 +4,8 @@ using System.Collections.Generic;
 
 namespace ZeldaOOP.Deserialization
 {
-    public interface IZDeserializer<T>
+    public interface IDeserializer<T>
     {
-        Task<T> Deserialize(List<byte> data);
+        T Deserialize(List<byte> data);
     }
 }

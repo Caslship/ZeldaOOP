@@ -8,16 +8,16 @@ using ZeldaOOP.Deserialization.Scene.Room;
 
 namespace ZeldaOOP.Deserialization.Scene
 {
-    public class SceneDeserializer : IZDeserializer<SceneModel>
+    public class SceneDeserializer : IDeserializer<SceneModel>
     {
-        private IZFetcher<List<byte>> ExternalResourceFetcher { get; }
+        private IFetcher<List<byte>> ExternalResourceFetcher { get; }
 
-        public SceneDeserializer(IZFetcher<List<byte>> externalResourceFetcher)
+        public SceneDeserializer(IFetcher<List<byte>> externalResourceFetcher)
         {
             ExternalResourceFetcher = externalResourceFetcher;
         }
 
-        public async Task<SceneModel> Deserialize(List<byte> data)
+        public SceneModel Deserialize(List<byte> data)
         {
             throw new NotImplementedException();
         }

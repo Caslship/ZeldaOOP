@@ -6,9 +6,9 @@ using ZeldaOOP.Core.Scene;
 
 namespace ZeldaOOP.Serialization.Scene
 {
-    public class SceneSerializer : IZSerializer<SceneModel>
+    public class SceneSerializer : ISerializer<SceneModel>
     {
-        public async Task<List<byte>> Serialize(SceneModel model, uint offset)
+        public List<byte> Serialize(SceneModel model, uint offset)
         {
             throw new NotImplementedException();
         }

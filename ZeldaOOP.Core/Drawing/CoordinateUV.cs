@@ -5,28 +5,26 @@ using System.Text;
 
 namespace ZeldaOOP.Core.Drawing
 {
-    public class ColorRGB<T> : Channel3D<T>
+    public class CoordinateUV<T> : IEnumerable<T>
     {
-        public T R
+        public T U { get; set; }
+        public T V { get; set; }
+
+        public virtual IEnumerator<T> GetEnumerator()
         {
-            get { return base.X; }
-            set { base.X = value; }
+            yield return U;
+            yield return V;
         }
-        public T G
+
+        IEnumerator IEnumerable.GetEnumerator()
         {
-            get { return base.Y; }
-            set { base.Y = value; }
-        }
-        public T B
-        {
-            get { return base.Z; }
-            set { base.Z = value; }
+            return this.GetEnumerator();
         }
     }
 
-    public class ColorRGBA<T> : ColorRGB<T>
+    public class CoordinateUVW<T> : CoordinateUV<T>
     {
-        public T A { get; set; }
+        public T W { get; set; }
 
         public override IEnumerator<T> GetEnumerator()
         {
@@ -36,7 +34,7 @@ namespace ZeldaOOP.Core.Drawing
                 yield return baseEnumerator.Current;
             }
 
-            yield return A;
+            yield return W;
         }
     }
 }

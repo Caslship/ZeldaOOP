@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ZeldaOOP.Fetching.BinaryResource
 {
-    public abstract class BinaryResourceFetcherBase : IZFetcher<List<byte>>
+    public abstract class BinaryResourceFetcherBase : IFetcher<List<byte>>
     {
         public abstract Task<List<byte>> Fetch(uint resourceAddress);
     }

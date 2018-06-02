@@ -11,10 +11,10 @@ using ZeldaOOP.Core.Scene;
 namespace ZeldaOOP.Tests.Serialization.Scene
 {
     [TestClass]
-    public class PolygonTypeSerializationTests
+    public class PolygonTypeSerializerTests
     {
         [TestMethod]
-        public async Task PolygonTypeSerialization()
+        public void PolygonTypeSerialization()
         {
             var serializer = new PolygonTypeSerializer();
 
@@ -57,7 +57,7 @@ namespace ZeldaOOP.Tests.Serialization.Scene
                 0x1D
             };
 
-            var polygonTypeBinary = await serializer.Serialize(polygonTypeModel);
+            var polygonTypeBinary = serializer.Serialize(polygonTypeModel);
 
             Assert.IsTrue(polygonTypeBinary.SequenceEqual(expectedBinary));
         }

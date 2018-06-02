@@ -6,9 +6,9 @@ using ZeldaOOP.Core.Scene.Room;
 
 namespace ZeldaOOP.Serialization.Scene.Room
 {
-    public class RoomSerializer : IZSerializer<RoomModel>
+    public class RoomSerializer : ISerializer<RoomModel>
     {
-        public async Task<List<byte>> Serialize(RoomModel model, uint offset)
+        public List<byte> Serialize(RoomModel model, uint offset)
         {
             throw new NotImplementedException();
         }

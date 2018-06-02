@@ -6,10 +6,10 @@ using ZeldaOOP.Core.Scene;
 
 namespace ZeldaOOP.Serialization.Scene
 {
-    public class PolygonTypeSerializer : IZSerializer<PolygonTypeModel>
+    public class PolygonTypeSerializer : ISerializer<PolygonTypeModel>
     {
         // http://wiki.cloudmodding.com/oot/Collision_Format_(Scenes)#Polygon_Types
-        public async Task<List<byte>> Serialize(PolygonTypeModel model, uint offset)
+        public List<byte> Serialize(PolygonTypeModel model, uint offset)
         {
             var objectSetTriggerEffects = 0x00;
             foreach (var mask in model.ObjectSetTriggerEffects)

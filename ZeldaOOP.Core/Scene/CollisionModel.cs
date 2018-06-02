@@ -8,15 +8,16 @@ namespace ZeldaOOP.Core.Scene
     public class CollisionModel
     {
         public List<PolygonModel> Polygons { get; set; }
-        public SkyboxCameraModel SkyboxCamera { get; set; }
+        public List<SkyboxCameraModel> SkyboxCameras { get; set; }
         public List<WaterBoxModel> WaterBoxes { get; set; }
     }
 
     public class SkyboxCameraModel
     {
+        public ushort CameraType { get; set; } // TODO: Turn into enum at some point
         public Point3D<short> Position { get; set; }
         public Rotation3D<short> Rotation { get; set; }
-        public byte Zoom { get; set; }
+        public short Zoom { get; set; }
     }
 
     public class PolygonModel
@@ -169,5 +170,6 @@ namespace ZeldaOOP.Core.Scene
         public Point3D<short> Position { get; set; }
         public ushort Length { get; set; }
         public ushort Width { get; set; }
+        public ushort Properties { get; set; }
     }
 }

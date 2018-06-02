@@ -6,10 +6,10 @@ using ZeldaOOP.Core.Scene.Room;
 
 namespace ZeldaOOP.Serialization.Scene.Room
 {
-    public class LightSourceSerializer : IZSerializer<LightSourceModel>
+    public class LightSourceSerializer : ISerializer<LightSourceModel>
     {
         // http://wiki.cloudmodding.com/oot/Scenes_and_Rooms#Unused_Lighting_list
-        public async Task<List<byte>> Serialize(LightSourceModel model, uint offset)
+        public List<byte> Serialize(LightSourceModel model, uint offset)
         {
             var binary = new List<byte>
             {

@@ -7,16 +7,16 @@ using ZeldaOOP.Core.Scene.Room;
 
 namespace ZeldaOOP.Deserialization.Scene.Room
 {
-    public class RoomDeserializer : IZDeserializer<RoomModel>
+    public class RoomDeserializer : IDeserializer<RoomModel>
     {
-        private IZFetcher<List<byte>> ExternalResourceFetcher { get; }
+        private IFetcher<List<byte>> ExternalResourceFetcher { get; }
 
-        public RoomDeserializer(IZFetcher<List<byte>> externalResourceFetcher)
+        public RoomDeserializer(IFetcher<List<byte>> externalResourceFetcher)
         {
             ExternalResourceFetcher = externalResourceFetcher;
         }
 
-        public async Task<RoomModel> Deserialize(List<byte> data)
+        public RoomModel Deserialize(List<byte> data)
         {
             throw new NotImplementedException();
         }

@@ -12,10 +12,10 @@ using ZeldaOOP.Serialization;
 namespace ZeldaOOP.Tests.Serialization.Scene.Room
 {
     [TestClass]
-    public class LightSourceSerializationTests
+    public class LightSourceSerializerTests
     {
         [TestMethod]
-        public async Task PointLightSourceSerialization()
+        public void PointLightSourceSerialization()
         {
             var serializer = new LightSourceSerializer();
 
@@ -50,13 +50,13 @@ namespace ZeldaOOP.Tests.Serialization.Scene.Room
                 0x00
             };
 
-            var pointLightBinary = await serializer.Serialize(pointLightModel);
+            var pointLightBinary = serializer.Serialize(pointLightModel);
 
             Assert.IsTrue(pointLightBinary.SequenceEqual(expectedPointLightBinary));
         }
 
         [TestMethod]
-        public async Task DirectionalLightSourceSerialization()
+        public void DirectionalLightSourceSerialization()
         {
             var serializer = new LightSourceSerializer();
 
@@ -87,7 +87,7 @@ namespace ZeldaOOP.Tests.Serialization.Scene.Room
                 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
             };
 
-            var directionalLightBinary = await serializer.Serialize(directionalLightModel);
+            var directionalLightBinary = serializer.Serialize(directionalLightModel);
 
             Assert.IsTrue(directionalLightBinary.SequenceEqual(expectedDirectionalLightBinary));
         }
